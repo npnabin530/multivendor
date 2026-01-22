@@ -75,7 +75,7 @@ export default function AdminSellersPage() {
                     {(["all", "active", "pending", "suspended"] as const).map((status) => (
                         <Button
                             key={status}
-                            variant={filter === status ? "default" : "outline"}
+                            variant={filter === status ? "primary" : "outline"}
                             size="sm"
                             onClick={() => setFilter(status)}
                             className="capitalize"
@@ -136,8 +136,8 @@ export default function AdminSellersPage() {
                                     </td>
                                     <td className="p-4">
                                         <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${seller.status === "active" ? "bg-accent/20 text-accent" :
-                                                seller.status === "pending" ? "bg-orange-500/20 text-orange-500" :
-                                                    "bg-red-500/20 text-red-500"
+                                            seller.status === "pending" ? "bg-orange-500/20 text-orange-500" :
+                                                "bg-red-500/20 text-red-500"
                                             }`}>
                                             {seller.status}
                                         </span>
