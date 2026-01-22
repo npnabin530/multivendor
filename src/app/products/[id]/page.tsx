@@ -25,7 +25,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
     const { id } = await params;
 
     // Fetch related products (mock for now, but utility is ready)
-    const relatedProducts = [];
+    const relatedProducts: any[] = [];
 
     // In a real app, you would fetch calculations from Prisma here
     // For now, we pass the mock product with the dynamic ID
